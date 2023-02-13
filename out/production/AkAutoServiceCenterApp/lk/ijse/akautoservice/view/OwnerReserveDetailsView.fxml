@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="836.0" prefWidth="1769.0"
+            xmlns="http://javafx.com/javafx/19"
+            fx:controller="lk.ijse.akautoservice.controller.OwnerReserveDetailsViewController">
+    <children>
+        <ImageView fitHeight="836.0" fitWidth="1769.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true"
+                   preserveRatio="true"/>
+        <Label layoutX="657.0" layoutY="14.0" text="Reservation Details" textFill="DODGERBLUE">
+            <font>
+                <Font name="Book Antiqua" size="53.0"/>
+            </font>
+        </Label>
+        <TableView fx:id="tblReservationDetails" layoutX="122.0" layoutY="188.0" prefHeight="624.0" prefWidth="1489.0">
+            <columns>
+                <TableColumn fx:id="colReserveID" prefWidth="194.99996948242188" text="Reserve ID"/>
+                <TableColumn fx:id="colCustID" prefWidth="210.0" text="Customer_ID"/>
+                <TableColumn fx:id="colVnumber" prefWidth="298.0" text="Vehicle_number"/>
+                <TableColumn fx:id="colServiceType" prefWidth="251.0" text="Service_Type"/>
+                <TableColumn fx:id="colServiceDate" prefWidth="210.0" text="Date"/>
+                <TableColumn fx:id="colServiceFee" prefWidth="323.0" text="Fee"/>
+            </columns>
+        </TableView>
+        <ImageView fitHeight="677.0" fitWidth="696.0" layoutX="-140.0" layoutY="-82.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../assest/gif/output-onlinegiftools%20(13).gif"/>
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>

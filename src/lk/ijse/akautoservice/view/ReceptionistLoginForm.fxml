@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="replogincontext" prefHeight="886.0" prefWidth="1471.0"
+            style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171"
+            fx:controller="lk.ijse.akautoservice.controller.ReceptionistLoginFormController">
+   <children>
+      <ImageView fitHeight="945.0" fitWidth="1472.0" layoutX="-5.0" layoutY="5.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assest/gif/logvideo.gif"/>
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="repLoginContext" layoutX="370.0" layoutY="130.0" opacity="0.93" prefHeight="699.0"
+                  prefWidth="735.0" style="-fx-background-color: #57606f;">
+         <children>
+            <TextField fx:id="txtfldpassword" alignment="CENTER_RIGHT" layoutX="174.0" layoutY="474.0" prefHeight="57.0"
+                       prefWidth="388.0" promptText="Password">
+               <effect>
+                  <InnerShadow/>
+               </effect>
+            </TextField>
+            <TextField fx:id="txtfldusername" alignment="CENTER_RIGHT" layoutX="174.0" layoutY="348.0" opacity="0.85"
+                       prefHeight="57.0" prefWidth="388.0" promptText="Username">
+               <effect>
+                  <InnerShadow/>
+               </effect>
+            </TextField>
+            <ImageView fitHeight="46.0" fitWidth="52.0" layoutX="174.0" layoutY="354.0" pickOnBounds="true"
+                       preserveRatio="true">
+               <image>
+                  <Image url="@../assest/logo/logname.png"/>
+               </image>
+            </ImageView>
+            <ImageView fitHeight="46.0" fitWidth="52.0" layoutX="174.0" layoutY="479.0" pickOnBounds="true"
+                       preserveRatio="true">
+               <image>
+                  <Image url="@../assest/logo/lock.png"/>
+               </image>
+            </ImageView>
+            <Separator layoutX="235.0" layoutY="354.0" orientation="VERTICAL" prefHeight="46.0" prefWidth="4.0"
+                       style="-fx-background-color: black;"/>
+            <Separator layoutX="232.0" layoutY="480.0" orientation="VERTICAL" prefHeight="46.0" prefWidth="4.0"
+                       style="-fx-background-color: black;"/>
+            <Button layoutX="174.0" layoutY="586.0" mnemonicParsing="false" onAction="#btnloginOnAction"
+                    prefHeight="48.0" prefWidth="388.0" style="-fx-background-color: #12CBC4;" text="Login"
+                    textFill="#f2e4e4">
+               <font>
+                  <Font name="Bell MT" size="25.0"/>
+               </font>
+            </Button>
+            <AnchorPane fx:id="mainStageLoadContext" layoutX="160.0" layoutY="276.0" opacity="0.67" prefHeight="382.0"
+                        prefWidth="419.0" style="-fx-background-color: white;" visible="false">
+               <children>
+                  <ImageView fx:id="resceptionistLoadingImg" fitHeight="389.0" fitWidth="422.0" layoutX="-5.0"
+                             pickOnBounds="true">
+                     <image>
+                        <Image url="@../assest/gif/giphy.gif"/>
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <ComboBox fx:id="cmbRole" layoutX="264.0" layoutY="120.0" onAction="#cmbSelectRoleOnAction"
+                      prefHeight="46.0" prefWidth="207.0" promptText="select your Role"
+                      style="-fx-background-color: white;"/>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="278.0" fitWidth="178.0" layoutX="642.0" layoutY="32.0" pickOnBounds="true"
+                 preserveRatio="true">
+         <image>
+            <Image url="@../assest/logo/customer.png"/>
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

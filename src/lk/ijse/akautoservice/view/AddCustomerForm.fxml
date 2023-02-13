@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="815.0" prefWidth="1372.0"
+            style="-fx-background-color: #f5f6fa;" xmlns="http://javafx.com/javafx/8.0.171"
+            fx:controller="lk.ijse.akautoservice.controller.CustomerFormController">
+   <children>
+      <TextField layoutX="622.0" layoutY="95.0" prefHeight="38.0" prefWidth="423.0" promptText="Vehicle  Catecory">
+         <font>
+            <Font name="Georgia" size="27.0"/>
+         </font>
+      </TextField>
+      <TextField layoutX="1089.0" layoutY="95.0" prefHeight="49.0" prefWidth="276.0" promptText="Vehicle Brand">
+         <font>
+            <Font name="Georgia" size="27.0"/>
+         </font>
+      </TextField>
+      <TextField layoutX="234.0" layoutY="184.0" prefHeight="49.0" prefWidth="812.0" promptText="Search Customer">
+         <font>
+            <Font name="Georgia" size="27.0"/>
+         </font>
+      </TextField>
+      <TextField layoutX="234.0" layoutY="95.0" prefHeight="37.0" prefWidth="354.0" promptText="Vehicle No">
+         <font>
+            <Font name="Georgia" size="27.0"/>
+         </font>
+      </TextField>
+      <TreeTableView layoutX="79.0" layoutY="329.0" prefHeight="472.0" prefWidth="1234.0">
+         <columns>
+            <TreeTableColumn prefWidth="212.99993896484375" text="Vehicle No"/>
+            <TreeTableColumn minWidth="0.0" prefWidth="204.99998474121094" text="Vehicle Category"/>
+            <TreeTableColumn minWidth="0.0" prefWidth="205.0" text="Vehicle Brand"/>
+            <TreeTableColumn minWidth="0.0" prefWidth="380.0" text="Option"/>
+         </columns>
+      </TreeTableView>
+      <ImageView fitHeight="298.0" fitWidth="287.0" layoutX="-21.0" layoutY="-26.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assest/gif/addVehicle.gif"/>
+         </image>
+      </ImageView>
+      <Label layoutX="622.0" layoutY="-34.0" prefHeight="124.0" prefWidth="448.0" text="Vehicle" textFill="#95afc0">
+         <font>
+            <Font name="Diwani Letter" size="40.0"/>
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

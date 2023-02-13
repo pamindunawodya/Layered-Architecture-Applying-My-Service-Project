@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="836.0" prefWidth="1802.0" xmlns="http://javafx.com/javafx/8.0.171"
+            fx:controller="lk.ijse.akautoservice.controller.VehicleFormController">
+   <children>
+      <AnchorPane layoutX="1521.0" layoutY="-2.0" minHeight="802.0" minWidth="246.0" prefHeight="847.0"
+                  prefWidth="283.0" style="-fx-background-color: #01a3a4;">
+         <effect>
+            <InnerShadow/>
+         </effect>
+         <children>
+            <ImageView fitHeight="319.0" fitWidth="268.0" layoutY="519.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../assest/gif/ff.gif"/>
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnAdd" alignment="CENTER_RIGHT" layoutX="25.0" layoutY="43.0"
+                       onAction="#btnAddVehicleOnAction" prefHeight="98.0" prefWidth="219.0"
+                       style="-fx-background-color: #2ecc71; -fx-background-radius: 60;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT" size="29.0"/>
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnModify" alignment="CENTER_RIGHT" layoutX="25.0" layoutY="159.0"
+                       onAction="#btnModifyVehicleOnAction" prefHeight="98.0" prefWidth="219.0"
+                       style="-fx-background-color: #485460; -fx-background-radius: 60;" text="Modify"
+                       textFill="#dcdde1">
+               <font>
+                  <Font name="Bodoni MT" size="29.0"/>
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnDelete" alignment="CENTER_RIGHT" layoutX="25.0" layoutY="275.0"
+                       onAction="#btnDeleteVehicleOnAction" prefHeight="98.0" prefWidth="219.0"
+                       style="-fx-background-color: #f53b57; -fx-background-radius: 70;" text="Delete"
+                       textFill="#d2e4e8">
+               <font>
+                  <Font name="Bodoni MT" size="29.0"/>
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="63.0" fitWidth="65.0" layoutX="58.0" layoutY="60.0" pickOnBounds="true"
+                       preserveRatio="true">
+               <image>
+                  <Image url="@../assest/gif/addicon.gif"/>
+               </image>
+            </ImageView>
+            <ImageView fitHeight="63.0" fitWidth="65.0" layoutX="58.0" layoutY="177.0" pickOnBounds="true"
+                       preserveRatio="true">
+               <image>
+                  <Image url="@../assest/gif/edit.gif"/>
+               </image>
+            </ImageView>
+            <ImageView fitHeight="63.0" fitWidth="65.0" layoutX="58.0" layoutY="293.0" pickOnBounds="true"
+                       preserveRatio="true">
+               <image>
+                  <Image url="@../assest/gif/remove.gif"/>
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="homeVehicleContext" layoutX="-2.0" layoutY="2.0" prefHeight="839.0" prefWidth="1527.0"
+                  style="-fx-background-color: #f5f6fa;" visible="false">
+         <children>
+            <ImageView fitHeight="298.0" fitWidth="411.0" layoutX="-21.0" layoutY="-26.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../assest/gif/addcu.gif"/>
+               </image>
+            </ImageView>
+            <Label layoutX="653.0" layoutY="-26.0" prefHeight="124.0" prefWidth="356.0" text=" Vehicle">
+               <font>
+                  <Font name="Bodoni MT" size="54.0"/>
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.470873786407767">
+                     <stops>
+                        <Stop color="#2b38e4"/>
+                        <Stop color="#f244ef" offset="1.0"/>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <TextField fx:id="htxtSearch" layoutX="319.0" layoutY="199.0" onKeyReleased="#htxtSearchVehicleNumber"
+                       prefHeight="41.0" prefWidth="890.0" promptText="Search Vehicle">
+               <font>
+                  <Font name="Georgia Pro" size="21.0"/>
+               </font>
+            </TextField>
+            <ImageView fitHeight="55.0" fitWidth="54.0" layoutX="1168.0" layoutY="219.0" pickOnBounds="true"
+                       preserveRatio="true"/>
+            <ImageView fx:id="btnSearch1" fitHeight="41.0" fitWidth="34.0" layoutX="1168.0" layoutY="203.0"
+                       pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/gif/search.gif"/>
+               </image>
+            </ImageView>
+            <TableView fx:id="htblVehicle" layoutX="23.0" layoutY="322.0" onMouseClicked="#mtblVehicleOnAction"
+                       prefHeight="503.0" prefWidth="1369.0">
+               <columns>
+                  <TableColumn fx:id="hcolCustomerId" prefWidth="207.99993896484375" text="Customer ID"/>
+                  <TableColumn fx:id="hColVehicleNo" minWidth="0.0" prefWidth="242.00003051757812" text="Vehicle No"/>
+                  <TableColumn fx:id="hColVehicleBrand" prefWidth="467.0" text="Vehicle Category"/>
+                  <TableColumn fx:id="hcolVehicleCategory" prefWidth="450.0" text="Vehicle Brand"/>
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="addVehicleFormContext" layoutX="8.0" layoutY="-6.0" prefHeight="847.0" prefWidth="1518.0"
+                  style="-fx-background-color: #f5f6fa;" visible="false">
+         <children>
+            <ImageView fitHeight="298.0" fitWidth="375.0" layoutX="-21.0" layoutY="-2.0" pickOnBounds="true"
+                       visible="false">
+               <image>
+                  <Image url="@../assest/gif/addcu.gif"/>
+               </image>
+            </ImageView>
+            <Label layoutX="692.0" layoutY="-28.0" prefHeight="124.0" prefWidth="448.0" text="Add Vehicle">
+               <font>
+                  <Font name="Bodoni MT" size="65.0"/>
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.44660194174757284">
+                     <stops>
+                        <Stop color="#d031a6"/>
+                        <Stop color="#4d5ccd" offset="1.0"/>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <TextField fx:id="atxtVehicleNo" layoutX="409.0" layoutY="209.0" prefHeight="49.0" prefWidth="304.0"
+                       promptText="Vehicle No"/>
+            <TextField fx:id="atxtVehicleBrand" layoutX="729.0" layoutY="209.0" prefHeight="49.0" prefWidth="411.0"
+                       promptText="Vehicle Brand"/>
+            <TextField fx:id="atxtVehicleCategory" layoutX="1147.0" layoutY="209.0" prefHeight="49.0" prefWidth="304.0"
+                       promptText="Vehicle Category"/>
+            <JFXButton layoutX="1158.0" layoutY="115.0" onAction="#btnAddOnAction" prefWidth="152.0"
+                       style="-fx-background-color: blue;" text="Add">
+               <font>
+                  <Font size="27.0"/>
+               </font>
+            </JFXButton>
+            <ComboBox fx:id="acmbCustomerID" layoutX="409.0" layoutY="119.0" onAction="#cmbCustomerfIdOnAction"
+                      prefHeight="49.0" prefWidth="411.0" promptText="Customer ID"/>
+            <TextField fx:id="atxtFldCustomerId" layoutX="832.0" layoutY="119.0" onAction="#atxtFldCustomerIdOnAction"
+                       prefHeight="49.0" prefWidth="304.0" promptText="Customer ID"/>
+            <TableView fx:id="atblVehicle" layoutX="29.0" layoutY="303.0" prefHeight="503.0" prefWidth="1416.0">
+               <columns>
+                  <TableColumn fx:id="acolCustomerId" prefWidth="207.99993896484375" text="Customer ID"/>
+                  <TableColumn fx:id="aColVehicleNo" minWidth="0.0" prefWidth="242.00003051757812" text="Vehicle No"/>
+                  <TableColumn fx:id="aColVehicleBrand" prefWidth="408.0" text="Vehicle Category"/>
+                  <TableColumn fx:id="acolVehicleCategory" prefWidth="556.0" text="Vehicle Brand"/>
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="deleteVehicleFormContext" prefHeight="839.0" prefWidth="1545.0"
+                  style="-fx-background-color: #f5f6fa;">
+         <children>
+            <ImageView fitHeight="272.0" fitWidth="283.0" layoutX="-21.0" layoutY="-2.0" pickOnBounds="true"
+                       visible="false">
+               <image>
+                  <Image url="@../assest/gif/addcu.gif"/>
+               </image>
+            </ImageView>
+            <Label layoutX="692.0" layoutY="-28.0" prefHeight="124.0" prefWidth="448.0" text="Delete Vehicle">
+               <font>
+                  <Font name="Bodoni MT" size="65.0"/>
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.44660194174757284">
+                     <stops>
+                        <Stop color="#d031a6"/>
+                        <Stop color="#4d5ccd" offset="1.0"/>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <TextField fx:id="dtxtSearch" layoutX="262.0" layoutY="226.0" onKeyReleased="#dtxtSearchFldOnAction"
+                       prefHeight="41.0" prefWidth="963.0" promptText="Search Vehicle">
+               <font>
+                  <Font name="Georgia Pro" size="21.0"/>
+               </font>
+            </TextField>
+            <TextField fx:id="dtxtVehicleNo" editable="false" layoutX="262.0" layoutY="127.0"
+                       onAction="#dbtnVehicleOnAction" prefHeight="41.0" prefWidth="219.0" promptText="Vehicle No"/>
+            <TextField fx:id="dtxtVehicleBrand" editable="false" layoutX="495.0" layoutY="127.0" prefHeight="41.0"
+                       prefWidth="317.0" promptText="Vehicle Brand"/>
+            <TextField fx:id="dtxtVehicleCategory" editable="false" layoutX="838.0" layoutY="127.0" prefHeight="41.0"
+                       prefWidth="384.0" promptText="Vehicle Category" visible="false"/>
+            <JFXButton layoutX="1259.0" layoutY="115.0" onAction="#btnDeleteOnAction"
+                       style="-fx-background-color: blue;" text="Delete">
+               <font>
+                  <Font size="30.0"/>
+               </font>
+            </JFXButton>
+            <TableView fx:id="dtblVehicle" layoutX="32.0" layoutY="299.0" onMouseClicked="#dtblVehicleOnAction"
+                       prefHeight="503.0" prefWidth="1369.0">
+               <columns>
+                  <TableColumn fx:id="dcolCustomerId" prefWidth="207.99993896484375" text="Customer ID"/>
+                  <TableColumn fx:id="dColVehicleNo" minWidth="0.0" prefWidth="242.00003051757812" text="Vehicle No"/>
+                  <TableColumn fx:id="dColVehicleBrand" prefWidth="408.0" text="Vehicle Category"/>
+                  <TableColumn fx:id="dcolVehicleCategory" prefWidth="509.0" text="Vehicle Brand"/>
+               </columns>
+            </TableView>
+            <ComboBox fx:id="dcmbCustomerID" layoutX="262.0" layoutY="53.0" onAction="#cmbVehicleIDOnAction"
+                      prefHeight="49.0" prefWidth="219.0" promptText="Customer ID"/>
+            <TextField fx:id="dtxtCustomerID" editable="false" layoutX="495.0" layoutY="57.0" prefHeight="41.0"
+                       prefWidth="219.0" promptText="Customer ID"/>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="modifyVehicleFormContext1" layoutX="9.0" layoutY="-2.0" prefHeight="839.0" prefWidth="1508.0"
+                  style="-fx-background-color: #f5f6fa;" visible="false">
+         <children>
+            <ImageView fitHeight="298.0" fitWidth="283.0" layoutX="-21.0" layoutY="-2.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../assest/gif/addcu.gif"/>
+               </image>
+            </ImageView>
+            <Label layoutX="692.0" layoutY="-28.0" prefHeight="124.0" prefWidth="448.0" text="Modify Vehicle">
+               <font>
+                  <Font name="Bodoni MT" size="65.0"/>
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.44660194174757284">
+                     <stops>
+                        <Stop color="#d031a6"/>
+                        <Stop color="#4d5ccd" offset="1.0"/>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <TextField fx:id="mtxtSearch" layoutX="262.0" layoutY="226.0" onKeyReleased="#msearchvehicleIDOnAction"
+                       prefHeight="41.0" prefWidth="963.0" promptText="Search Vehicle">
+               <font>
+                  <Font name="Georgia Pro" size="21.0"/>
+               </font>
+            </TextField>
+            <TextField fx:id="mtxtVehicleNo" layoutX="262.0" layoutY="151.0" prefHeight="41.0" prefWidth="219.0"
+                       promptText="Vehicle No"/>
+            <TextField fx:id="mtxtVehicleBrand" layoutX="496.0" layoutY="151.0" prefHeight="41.0" prefWidth="317.0"
+                       promptText="Vehicle Brand"/>
+            <TextField fx:id="mtxtVehicleCategory" layoutX="841.0" layoutY="151.0" prefHeight="41.0" prefWidth="384.0"
+                       promptText="Vehicle Category"/>
+            <Button layoutX="1238.0" layoutY="147.0" mnemonicParsing="false" onAction="#modifyBtnOnAction" text="Modify"
+                    textFill="#e42222">
+               <font>
+                  <Font name="Georgia" size="27.0"/>
+               </font>
+            </Button>
+            <TableView fx:id="mtblVehicle" layoutX="34.0" layoutY="306.0" onMouseClicked="#mtblVehicleOnAction"
+                       prefHeight="503.0" prefWidth="1369.0">
+               <columns>
+                  <TableColumn fx:id="mcolCustomerId" prefWidth="207.99993896484375" text="Customer ID"/>
+                  <TableColumn fx:id="mColVehicleNo" minWidth="0.0" prefWidth="242.00003051757812" text="Vehicle No"/>
+                  <TableColumn fx:id="mColVehicleBrand" prefWidth="467.0" text="Vehicle Category"/>
+                  <TableColumn fx:id="mcolVehicleCategory" prefWidth="450.0" text="Vehicle Brand"/>
+               </columns>
+            </TableView>
+            <ComboBox fx:id="mcmbCustomerID" layoutX="262.0" layoutY="81.0" onAction="#mcmbCustomerIDOnAction"
+                      prefHeight="41.0" prefWidth="219.0" promptText="Customer ID"/>
+            <TextField fx:id="mtxtCustomerID" layoutX="496.0" layoutY="81.0" onAction="#mtxtCustomerIdOnAction"
+                       prefHeight="41.0" prefWidth="317.0" promptText="Customer ID"/>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

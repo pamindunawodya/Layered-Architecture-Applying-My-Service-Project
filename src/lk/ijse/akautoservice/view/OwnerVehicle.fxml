@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="836.0" prefWidth="1802.0"
+            xmlns="http://javafx.com/javafx/8.0.171"
+            fx:controller="lk.ijse.akautoservice.controller.OwnerVehicleController">
+   <children>
+      <AnchorPane fx:id="homeVehicleContext" layoutX="1.0" prefHeight="851.0" prefWidth="1802.0"
+                  style="-fx-background-color: #f5f6fa;">
+         <children>
+            <ImageView fitHeight="857.0" fitWidth="1801.0" layoutX="-4.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../assest/image/4850037.jpg"/>
+               </image>
+            </ImageView>
+            <ImageView fitHeight="298.0" fitWidth="411.0" layoutX="-21.0" layoutY="-26.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../assest/gif/addcu.gif"/>
+               </image>
+            </ImageView>
+            <Label layoutX="705.0" prefHeight="139.0" prefWidth="393.0" text=" Vehicle">
+               <font>
+                  <Font name="Bodoni MT" size="54.0"/>
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.470873786407767">
+                     <stops>
+                        <Stop color="#2b38e4"/>
+                        <Stop color="#f244ef" offset="1.0"/>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <TextField fx:id="htxtSearch" layoutX="325.0" layoutY="247.0" onKeyReleased="#htxtSearchVehicleNumber"
+                       prefHeight="41.0" prefWidth="1050.0" promptText="Search Vehicle">
+               <font>
+                  <Font name="Georgia Pro" size="21.0"/>
+               </font>
+            </TextField>
+            <ImageView fitHeight="55.0" fitWidth="54.0" layoutX="1168.0" layoutY="219.0" pickOnBounds="true"
+                       preserveRatio="true"/>
+            <ImageView fx:id="btnSearch1" fitHeight="79.0" fitWidth="134.0" layoutX="1392.0" layoutY="233.0"
+                       pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/gif/search.gif"/>
+               </image>
+            </ImageView>
+            <TableView fx:id="htblVehicle" layoutX="66.0" layoutY="322.0" onMouseClicked="#mtblVehicleOnAction"
+                       prefHeight="503.0" prefWidth="1326.0">
+               <columns>
+                  <TableColumn fx:id="hcolCustomerId" prefWidth="207.99993896484375" text="Customer ID"/>
+                  <TableColumn fx:id="hColVehicleNo" minWidth="0.0" prefWidth="242.00003051757812" text="Vehicle No"/>
+                  <TableColumn fx:id="hColVehicleBrand" prefWidth="467.0" text="Vehicle Category"/>
+                  <TableColumn fx:id="hcolVehicleCategory" prefWidth="450.0" text="Vehicle Brand"/>
+               </columns>
+            </TableView>
+            <ImageView fitHeight="865.0" fitWidth="241.0" layoutX="1503.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../assest/image/gg.jpg"/>
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

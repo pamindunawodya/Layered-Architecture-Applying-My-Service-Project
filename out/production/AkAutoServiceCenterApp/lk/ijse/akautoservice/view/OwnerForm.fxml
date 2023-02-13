@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="839.0" prefWidth="1731.0"
+            xmlns="http://javafx.com/javafx/8.0.171"
+            fx:controller="lk.ijse.akautoservice.controller.OwnerFormController">
+    <children>
+        <AnchorPane fx:id="mainSideBarContext" onMouseEntered="#mouseOnEnterMainContext" prefHeight="997.0"
+                    prefWidth="143.0" style="-fx-background-color: #10ac84;">
+            <children>
+                <ImageView fitHeight="87.0" fitWidth="91.0" layoutX="28.0" layoutY="46.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../assest/logo/home.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="87.0" fitWidth="91.0" layoutX="28.0" layoutY="210.0"
+                           onMouseClicked="#openCustomerFormOnAction" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assest/logo/customer.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="87.0" fitWidth="91.0" layoutX="28.0" layoutY="383.0"
+                           onMouseClicked="#openVehicleFormOnAction" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assest/logo/vehicle.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="87.0" fitWidth="91.0" layoutX="28.0" layoutY="708.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../assest/logo/report.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="87.0" fitWidth="91.0" layoutX="28.0" layoutY="547.0"
+                           onMouseClicked="#openReservationFormOnAction" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assest/logo/book.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fx:id="t" fitHeight="87.0" fitWidth="91.0" layoutX="28.0" layoutY="856.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../assest/logo/Logout.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="141.0" layoutY="-2.0" prefHeight="153.0" prefWidth="1802.0">
+            <children>
+                <ImageView fitHeight="169.0" fitWidth="1802.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@../assest/gif/title.gif"/>
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="midanchorpane" layoutX="144.0" layoutY="169.0" prefHeight="828.0" prefWidth="1785.0"/>
+        <AnchorPane fx:id="loadingcontext" layoutX="141.0" layoutY="161.0" opacity="0.51" prefHeight="836.0"
+                    prefWidth="1802.0" style="-fx-background-color: black;" visible="false">
+            <children>
+                <ProgressBar fx:id="pbart" layoutX="274.0" layoutY="503.0" prefHeight="51.0" prefWidth="1379.0"
+                             progress="0.3" style="-fx-background-color: RED;"/>
+                <Label layoutX="839.0" layoutY="592.0" text="Loading...">
+                    <font>
+                        <Font name="Britannic Bold" size="57.0"/>
+                    </font>
+                    <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.33980582524271846">
+                            <stops>
+                                <Stop color="#ff2713"/>
+                                <Stop color="#110404" offset="1.0"/>
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                </Label>
+                <ImageView fitHeight="339.0" fitWidth="690.0" layoutX="594.0" layoutY="129.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@../assest/gif/vehicle.gif"/>
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="animationBarContext" onMouseExited="#mouseOnExitmaincontext" prefHeight="997.0"
+                    prefWidth="327.0" style="-fx-background-color: #10ac84;" visible="false">
+            <children>
+                <ImageView fitHeight="87.0" fitWidth="91.0" layoutX="28.0" layoutY="46.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../assest/logo/home.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fx:id="h" fitHeight="87.0" fitWidth="91.0" layoutX="28.0" layoutY="856.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../assest/logo/Logout.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="87.0" fitWidth="91.0" layoutX="28.0" layoutY="210.0"
+                           onMouseClicked="#openCustomerFormOnAction" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assest/logo/customer.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="87.0" fitWidth="91.0" layoutX="28.0" layoutY="383.0"
+                           onMouseClicked="#openVehicleFormOnAction" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assest/logo/vehicle.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="87.0" fitWidth="91.0" layoutX="28.0" layoutY="708.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../assest/logo/report.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="87.0" fitWidth="91.0" layoutX="28.0" layoutY="547.0"
+                           onMouseClicked="#openReservationFormOnAction" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assest/logo/book.png"/>
+                    </image>
+                </ImageView>
+                <Label layoutX="156.0" layoutY="69.0" text="Home" textFill="#e4d9d9">
+                    <font>
+                        <Font name="Georgia" size="34.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="146.0" layoutY="234.0" text="Customer" textFill="#e4d9d9">
+                    <font>
+                        <Font name="Georgia" size="34.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="146.0" layoutY="407.0" text="Vehicle" textFill="#e4d9d9">
+                    <font>
+                        <Font name="Georgia" size="34.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="147.0" layoutY="570.0" text="Reservation" textFill="#e4d9d9">
+                    <font>
+                        <Font name="Georgia" size="34.0"/>
+                    </font>
+                    `-
+                </Label>
+                <Label layoutX="147.0" layoutY="732.0" text="Report" textFill="#e4d9d9">
+                    <font>
+                        <Font name="Georgia" size="34.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="151.0" layoutY="880.0" text="Logout" textFill="#e4d9d9">
+                    <font>
+                        <Font name="Georgia" size="34.0"/>
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

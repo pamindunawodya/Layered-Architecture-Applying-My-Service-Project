@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="839.0" maxWidth="1731.0" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="839.0" prefWidth="1731.0" xmlns="http://javafx.com/javafx/8.0.171"
+            fx:controller="lk.ijse.akautoservice.controller.CustomerFormController">
+   <children>
+      <AnchorPane layoutX="1486.0" minHeight="802.0" minWidth="246.0" prefHeight="823.0" prefWidth="246.0"
+                  style="-fx-background-color: #01a3a4;">
+         <effect>
+            <InnerShadow/>
+         </effect>
+         <children>
+            <ImageView fitHeight="319.0" fitWidth="268.0" layoutY="519.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../assest/gif/ff.gif"/>
+               </image>
+            </ImageView>
+            <JFXButton alignment="CENTER_RIGHT" layoutX="25.0" layoutY="43.0" onAction="#btnAddOnAction"
+                       prefHeight="98.0" prefWidth="219.0"
+                       style="-fx-background-color: #2ecc71; -fx-background-radius: 60;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT" size="29.0"/>
+               </font>
+            </JFXButton>
+            <JFXButton alignment="CENTER_RIGHT" layoutX="25.0" layoutY="159.0" onAction="#btnModifyOnAction"
+                       prefHeight="98.0" prefWidth="219.0"
+                       style="-fx-background-color: #485460; -fx-background-radius: 60;" text="Modify"
+                       textFill="#dcdde1">
+               <font>
+                  <Font name="Bodoni MT" size="29.0"/>
+               </font>
+            </JFXButton>
+            <JFXButton alignment="CENTER_RIGHT" layoutX="25.0" layoutY="275.0" onAction="#btnDeleteOnAction"
+                       prefHeight="98.0" prefWidth="219.0"
+                       style="-fx-background-color: #f53b57; -fx-background-radius: 70;" text="Delete"
+                       textFill="#d2e4e8">
+               <font>
+                  <Font name="Bodoni MT" size="29.0"/>
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="63.0" fitWidth="65.0" layoutX="58.0" layoutY="60.0" pickOnBounds="true"
+                       preserveRatio="true">
+               <image>
+                  <Image url="@../assest/gif/addicon.gif"/>
+               </image>
+            </ImageView>
+            <ImageView fitHeight="63.0" fitWidth="65.0" layoutX="58.0" layoutY="177.0" pickOnBounds="true"
+                       preserveRatio="true">
+               <image>
+                  <Image url="@../assest/gif/edit.gif"/>
+               </image>
+            </ImageView>
+            <ImageView fitHeight="63.0" fitWidth="65.0" layoutX="58.0" layoutY="293.0" pickOnBounds="true"
+                       preserveRatio="true">
+               <image>
+                  <Image url="@../assest/gif/remove.gif"/>
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="modifycontext" layoutX="5.0" layoutY="4.0" prefHeight="839.0" prefWidth="1481.0"
+                  style="-fx-background-color: #f5f6fa;" visible="false">
+         <children>
+            <TextField fx:id="mtxtldname" layoutX="622.0" layoutY="95.0" prefHeight="38.0" prefWidth="423.0"
+                       promptText="Name">
+               <font>
+                  <Font name="Georgia" size="27.0"/>
+               </font>
+            </TextField>
+            <TextField fx:id="mtxtldnic" layoutX="1089.0" layoutY="95.0" prefHeight="49.0" prefWidth="276.0"
+                       promptText="NIC">
+               <font>
+                  <Font name="Georgia" size="27.0"/>
+               </font>
+            </TextField>
+            <TextField fx:id="mtxtldaddress" layoutX="234.0" layoutY="182.0" prefHeight="43.0" prefWidth="354.0"
+                       promptText="Address">
+               <font>
+                  <Font name="Georgia" size="27.0"/>
+               </font>
+            </TextField>
+            <TextField fx:id="mtxtfldsearchcustomer" layoutX="234.0" layoutY="257.0"
+                       onKeyReleased="#mtxtSearchCustOnAction" prefHeight="49.0" prefWidth="1139.0"
+                       promptText="Search Customer">
+               <font>
+                  <Font name="Georgia" size="27.0"/>
+               </font>
+            </TextField>
+            <TextField fx:id="mtxtldcustomerid" layoutX="234.0" layoutY="95.0" prefHeight="37.0" prefWidth="354.0"
+                       promptText="CustomerID">
+               <font>
+                  <Font name="Georgia" size="27.0"/>
+               </font>
+            </TextField>
+            <TextField fx:id="mtxtldmobilenumber" layoutX="622.0" layoutY="182.0" prefHeight="28.0" prefWidth="423.0"
+                       promptText="Mobile No">
+               <font>
+                  <Font name="Georgia" size="27.0"/>
+               </font>
+            </TextField>
+            <ImageView fitHeight="291.0" fitWidth="288.0" layoutX="-21.0" layoutY="-19.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../assest/gif/aa.gif"/>
+               </image>
+            </ImageView>
+            <Label layoutX="622.0" layoutY="-34.0" prefHeight="124.0" prefWidth="448.0" text="Modify Customer"
+                   textFill="#b53471">
+               <font>
+                  <Font name="Diwani Letter" size="40.0"/>
+               </font>
+            </Label>
+            <JFXButton layoutX="1097.0" layoutY="172.0" onAction="#mbtnmodifucustomerOnAction" prefHeight="73.0"
+                       prefWidth="276.0" style="-fx-background-color: #485460;" text="Modify Customer"
+                       textFill="#f8f5f5">
+               <font>
+                  <Font size="29.0"/>
+               </font>
+            </JFXButton>
+            <TableView fx:id="mtblCustomer" layoutX="38.0" layoutY="373.0" onMouseClicked="#mtblCustomerOnAction"
+                       prefHeight="342.0" prefWidth="1298.0">
+               <columns>
+                  <TableColumn fx:id="mcolCustomerID" prefWidth="157.0" text="Customer ID"/>
+                  <TableColumn fx:id="mcolCustomerName" minWidth="0.0" prefWidth="294.0" text="Name"/>
+                  <TableColumn fx:id="mcolCustomerNic" minWidth="0.0" prefWidth="234.0" text="Nic"/>
+                  <TableColumn fx:id="mcolCustomerAddress" minWidth="0.0" prefWidth="285.0" text="Address"/>
+                  <TableColumn fx:id="mcolMobileNo" minWidth="0.0" prefWidth="388.0" text="Mobile No"/>
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="addcontext" prefHeight="823.0" prefWidth="1481.0" style="-fx-background-color: #f5f6fa;">
+         <children>
+            <TextField fx:id="atxtfldname" layoutX="622.0" layoutY="189.0" prefHeight="38.0" prefWidth="423.0"
+                       promptText="Name">
+               <font>
+                  <Font name="Georgia" size="27.0"/>
+               </font>
+            </TextField>
+            <TextField fx:id="atxtfldnic" layoutX="1089.0" layoutY="189.0" prefHeight="49.0" prefWidth="276.0"
+                       promptText="NIC">
+               <font>
+                  <Font name="Georgia" size="27.0"/>
+               </font>
+            </TextField>
+            <TextField fx:id="atxtfldaddress" layoutX="234.0" layoutY="280.0" prefHeight="43.0" prefWidth="354.0"
+                       promptText="Address">
+               <font>
+                  <Font name="Georgia" size="27.0"/>
+               </font>
+            </TextField>
+            <TextField fx:id="atxtfldcustomerid" layoutX="234.0" layoutY="189.0" prefHeight="37.0" prefWidth="354.0"
+                       promptText="CustomerID">
+               <font>
+                  <Font name="Georgia" size="27.0"/>
+               </font>
+            </TextField>
+            <TextField fx:id="atxtfldmobile" layoutX="622.0" layoutY="280.0" prefHeight="28.0" prefWidth="423.0"
+                       promptText="Mobile No">
+               <font>
+                  <Font name="Georgia" size="27.0"/>
+               </font>
+            </TextField>
+            <ImageView fitHeight="298.0" fitWidth="299.0" layoutX="-21.0" layoutY="-26.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../assest/gif/addcu.gif"/>
+               </image>
+            </ImageView>
+            <Label layoutX="622.0" layoutY="-34.0" prefHeight="124.0" prefWidth="448.0" text="Add Customer"
+                   textFill="#30336b">
+               <font>
+                  <Font name="Diwani Letter" size="40.0"/>
+               </font>
+            </Label>
+            <JFXButton layoutX="1078.0" layoutY="258.0" onAction="#abtnaddcustomerOnAction" prefHeight="98.0"
+                       prefWidth="288.0" style="-fx-background-color: green;" text="Add Customer">
+               <font>
+                  <Font size="29.0"/>
+               </font>
+            </JFXButton>
+            <TableView fx:id="atblCustomer" layoutX="40.0" layoutY="381.0" prefHeight="406.0" prefWidth="1323.0">
+               <columns>
+                  <TableColumn fx:id="acolCustomerID" prefWidth="157.0" text="Customer ID"/>
+                  <TableColumn fx:id="acolCustomerName" minWidth="0.0" prefWidth="294.0" text="Name"/>
+                  <TableColumn fx:id="acolCustomerNic" minWidth="0.0" prefWidth="234.0" text="Nic"/>
+                  <TableColumn fx:id="acolCustomerAddress" minWidth="0.0" prefWidth="285.0" text="Address"/>
+                  <TableColumn fx:id="acolCustomerMobileNo" minWidth="0.0" prefWidth="388.0" text="Mobile No"/>
+               </columns>
+            </TableView>
+            <Label fx:id="lblCustomerWarning" layoutX="243.0" layoutY="248.0" textFill="#ee1515"/>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="deletecontext" layoutX="8.0" prefHeight="823.0" prefWidth="1474.0"
+                  style="-fx-background-color: #f5f6fa;" visible="false">
+         <children>
+            <TextField fx:id="dtxtfldname" layoutX="622.0" layoutY="95.0" prefHeight="38.0" prefWidth="423.0"
+                       promptText="Name">
+               <font>
+                  <Font name="Georgia" size="27.0"/>
+               </font>
+            </TextField>
+            <TextField fx:id="dtxtfldnic" layoutX="1089.0" layoutY="95.0" prefHeight="49.0" prefWidth="276.0"
+                       promptText="NIC">
+               <font>
+                  <Font name="Georgia" size="27.0"/>
+               </font>
+            </TextField>
+            <TextField fx:id="dtxtfldaddress" layoutX="234.0" layoutY="182.0" prefHeight="43.0" prefWidth="354.0"
+                       promptText="Address">
+               <font>
+                  <Font name="Georgia" size="27.0"/>
+               </font>
+            </TextField>
+            <TextField fx:id="dtxtfldsearch" layoutX="234.0" layoutY="257.0" onKeyReleased="#dtxtSearchFldOnAction"
+                       prefHeight="49.0" prefWidth="1139.0" promptText="Search Customer">
+               <font>
+                  <Font name="Georgia" size="27.0"/>
+               </font>
+            </TextField>
+            <TextField fx:id="dtxtfldcustomerid" layoutX="234.0" layoutY="95.0" prefHeight="37.0" prefWidth="354.0"
+                       promptText="CustomerID">
+               <font>
+                  <Font name="Georgia" size="27.0"/>
+               </font>
+            </TextField>
+            <TextField fx:id="dtxtfldmobile" layoutX="622.0" layoutY="182.0" prefHeight="28.0" prefWidth="423.0"
+                       promptText="Mobile No">
+               <font>
+                  <Font name="Georgia" size="27.0"/>
+               </font>
+            </TextField>
+            <ImageView fitHeight="291.0" fitWidth="288.0" layoutX="-21.0" layoutY="-19.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../assest/gif/aa.gif"/>
+               </image>
+            </ImageView>
+            <Label layoutX="622.0" layoutY="-34.0" prefHeight="124.0" prefWidth="448.0" text="Delete Customer"
+                   textFill="#b53471">
+               <font>
+                  <Font name="Diwani Letter" size="40.0"/>
+               </font>
+            </Label>
+            <JFXButton layoutX="1093.0" layoutY="172.0" onAction="#ddeleteCustomerOnAction" prefHeight="31.0"
+                       prefWidth="276.0" style="-fx-background-color: #ff3f34;" text="Delete" textFill="#f8f5f5">
+               <font>
+                  <Font name="Bodoni MT" size="32.0"/>
+               </font>
+            </JFXButton>
+            <TableView fx:id="dcustomertbl" layoutX="25.0" layoutY="428.0" onMouseClicked="#dtblCustomerOnAction"
+                       prefHeight="342.0" prefWidth="1298.0">
+               <columns>
+                  <TableColumn fx:id="dcolCustomerID" prefWidth="157.0" text="Customer ID"/>
+                  <TableColumn fx:id="dcolCustomerName" minWidth="0.0" prefWidth="294.0" text="Name"/>
+                  <TableColumn fx:id="dcolCustomerNic" minWidth="0.0" prefWidth="234.0" text="Nic"/>
+                  <TableColumn fx:id="dcolCustomerAddress" minWidth="0.0" prefWidth="285.0" text="Address"/>
+                  <TableColumn fx:id="dcolCustomerMobileNo" minWidth="0.0" prefWidth="388.0" text="Mobile No"/>
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="customerHomeContext" layoutX="1.0" layoutY="6.0" prefHeight="823.0" prefWidth="1481.0"
+                  visible="false">
+         <children>
+            <TableView fx:id="htblCustomer" layoutX="18.0" layoutY="457.0" prefHeight="342.0" prefWidth="1347.0">
+               <columns>
+                  <TableColumn fx:id="hcolCustomerID" prefWidth="157.0" text="Customer ID"/>
+                  <TableColumn fx:id="hcolCustomerName" minWidth="0.0" prefWidth="294.0" text="Name"/>
+                  <TableColumn fx:id="hcolCustomerNic" minWidth="0.0" prefWidth="234.0" text="Nic"/>
+                  <TableColumn fx:id="hcolCustomerAddress" minWidth="0.0" prefWidth="285.0" text="Address"/>
+                  <TableColumn fx:id="hcolCustomerMobileNo" minWidth="0.0" prefWidth="388.0" text="Mobile No"/>
+               </columns>
+            </TableView>
+            <TextField fx:id="htxtSearch" layoutX="26.0" layoutY="354.0" onKeyReleased="#htxtSearchIDOnAction"
+                       prefHeight="49.0" prefWidth="856.0" promptText="Search Customer"/>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
